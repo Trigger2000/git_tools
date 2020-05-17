@@ -1,0 +1,294 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d443b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d443b.dir/build.make CMakeFiles/cmTC_d443b.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d443b.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d443b.dir/CheckSymbolExists.c.o   -c /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_d443b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d443b.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_d443b.dir/CheckSymbolExists.c.o  -o cmTC_d443b 
+CMakeFiles/cmTC_d443b.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_d443b.dir/build.make:97: recipe for target 'cmTC_d443b' failed
+make[1]: *** [cmTC_d443b] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_d443b/fast' failed
+make: *** [cmTC_d443b/fast] Error 2
+
+File /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_93f02/fast"
+/usr/bin/make -f CMakeFiles/cmTC_93f02.dir/build.make CMakeFiles/cmTC_93f02.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_93f02.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_93f02.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_93f02
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93f02.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_93f02.dir/CheckFunctionExists.c.o  -o cmTC_93f02 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_93f02.dir/build.make:97: recipe for target 'cmTC_93f02' failed
+make[1]: *** [cmTC_93f02] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_93f02/fast' failed
+make: *** [cmTC_93f02/fast] Error 2
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_ST_MTIMESPEC failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_833da/fast"
+/usr/bin/make -f CMakeFiles/cmTC_833da.dir/build.make CMakeFiles/cmTC_833da.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_833da.dir/src.c.o
+/usr/bin/cc   -DHAVE_STRUCT_STAT_ST_MTIMESPEC   -o CMakeFiles/cmTC_833da.dir/src.c.o   -c /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/src.c
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/src.c:7:35: error: ‘struct stat’ has no member named ‘st_mtimespec’
+    7 |    (void)sizeof(((struct stat *)0)->st_mtimespec);
+      |                                   ^~
+CMakeFiles/cmTC_833da.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_833da.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_833da.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_833da/fast' failed
+make: *** [cmTC_833da/fast] Error 2
+
+Source file was:
+
+#include <sys/types.h>
+#include <sys/stat.h>
+
+int main()
+{
+   (void)sizeof(((struct stat *)0)->st_mtimespec);
+   return 0;
+}
+
+Performing C SOURCE FILE Test HAVE_STRUCT_STAT_MTIME_NSEC failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_60dad/fast"
+/usr/bin/make -f CMakeFiles/cmTC_60dad.dir/build.make CMakeFiles/cmTC_60dad.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_60dad.dir/src.c.o
+/usr/bin/cc   -DHAVE_STRUCT_STAT_MTIME_NSEC   -o CMakeFiles/cmTC_60dad.dir/src.c.o   -c /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/src.c
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/src.c:6:35: error: ‘struct stat’ has no member named ‘st_mtime_nsec’
+    6 |    (void)sizeof(((struct stat *)0)->st_mtime_nsec);
+      |                                   ^~
+CMakeFiles/cmTC_60dad.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_60dad.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_60dad.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_60dad/fast' failed
+make: *** [cmTC_60dad/fast] Error 2
+
+Source file was:
+
+#include <sys/stat.h>
+
+int main()
+{
+   (void)sizeof(((struct stat *)0)->st_mtime_nsec);
+   return 0;
+}
+
+Performing C SOURCE FILE Test IS_WDOCUMENTATION_SUPPORTED failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b868e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b868e.dir/build.make CMakeFiles/cmTC_b868e.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b868e.dir/src.c.o
+/usr/bin/cc   -D_GNU_SOURCE  -Wall -Wextra -fvisibility=hidden -fPIC -DIS_WDOCUMENTATION_SUPPORTED   -Wdocumentation -o CMakeFiles/cmTC_b868e.dir/src.c.o   -c /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/src.c
+cc: error: unrecognized command line option '-Wdocumentation'
+CMakeFiles/cmTC_b868e.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_b868e.dir/src.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_b868e.dir/src.c.o] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b868e/fast' failed
+make: *** [cmTC_b868e/fast] Error 2
+
+Source file was:
+int main(void) { return 0; }
+Determining if the prototype qsort_r exists for HAVE_QSORT_R_BSD failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_82eef/fast"
+/usr/bin/make -f CMakeFiles/cmTC_82eef.dir/build.make CMakeFiles/cmTC_82eef.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_82eef.dir/CheckPrototypeDefinition.c.o
+/usr/bin/cc   -D_GNU_SOURCE  -Wall -Wextra -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wformat -Wformat-security    -o CMakeFiles/cmTC_82eef.dir/CheckPrototypeDefinition.c.o   -c /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:6: error: conflicting types for ‘qsort_r’
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |      ^~~~~~~
+In file included from /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:1:
+/usr/include/stdlib.h:830:13: note: previous declaration of ‘qsort_r’ was here
+  830 | extern void qsort_r (void *__base, size_t __nmemb, size_t __size,
+      |             ^~~~~~~
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c: In function ‘qsort_r’:
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:20: warning: unused parameter ‘base’ [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |              ~~~~~~^~~~
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:33: warning: unused parameter ‘nmemb’ [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |                          ~~~~~~~^~~~~
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:47: warning: unused parameter ‘size’ [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |                                        ~~~~~~~^~~~
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:59: warning: unused parameter ‘thunk’ [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |                                                     ~~~~~~^~~~~
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckPrototypeDefinition.c:14:72: warning: unused parameter ‘compar’ [-Wunused-parameter]
+   14 | void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+      |                                                                  ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CMakeFiles/cmTC_82eef.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_82eef.dir/CheckPrototypeDefinition.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_82eef.dir/CheckPrototypeDefinition.c.o] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_82eef/fast' failed
+make: *** [cmTC_82eef/fast] Error 2
+
+
+#include <stdlib.h>
+
+
+static void cmakeRequireSymbol(int dummy, ...) {
+  (void) dummy;
+}
+
+static void checkSymbol(void) {
+#ifndef qsort_r
+  cmakeRequireSymbol(0, &qsort_r);
+#endif
+}
+
+void qsort_r(void *base, size_t nmemb, size_t size, void *thunk, int (*compar)(void *, const void *, const void *)) {
+  return ;
+}
+
+#ifdef __CLASSIC_C__
+int main() {
+  int ac;
+  char*av[];
+#else
+int main(int ac, char *av[]) {
+#endif
+  checkSymbol();
+  if (ac > 1000) {
+    return *av[0];
+  }
+  return 0;
+}
+
+
+Determining if the function qsort_s exists failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9af47/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9af47.dir/build.make CMakeFiles/cmTC_9af47.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9af47.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -D_GNU_SOURCE  -Wall -Wextra -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=qsort_s   -o CMakeFiles/cmTC_9af47.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9af47
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9af47.dir/link.txt --verbose=1
+/usr/bin/cc -D_GNU_SOURCE  -Wall -Wextra -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=qsort_s    CMakeFiles/cmTC_9af47.dir/CheckFunctionExists.c.o  -o cmTC_9af47 
+CMakeFiles/cmTC_9af47.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `qsort_s'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9af47.dir/build.make:97: recipe for target 'cmTC_9af47' failed
+make[1]: *** [cmTC_9af47] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9af47/fast' failed
+make: *** [cmTC_9af47/fast] Error 2
+
+
+Determining if the regcomp_l exist failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8c1ab/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8c1ab.dir/build.make CMakeFiles/cmTC_8c1ab.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8c1ab.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -D_GNU_SOURCE  -Wall -Wextra -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wformat -Wformat-security    -o CMakeFiles/cmTC_8c1ab.dir/CheckSymbolExists.c.o   -c /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:3:10: fatal error: xlocale.h: No such file or directory
+    3 | #include <xlocale.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_8c1ab.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_8c1ab.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_8c1ab.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_8c1ab/fast' failed
+make: *** [cmTC_8c1ab/fast] Error 2
+
+File /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <regex.h>
+#include <xlocale.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef regcomp_l
+  return ((int*)(&regcomp_l))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the include file windows.h exists failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b9a09/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b9a09.dir/build.make CMakeFiles/cmTC_b9a09.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b9a09.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -D_GNU_SOURCE  -Wall -Wextra -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wformat -Wformat-security    -o CMakeFiles/cmTC_b9a09.dir/CheckIncludeFile.c.o   -c /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: windows.h: No such file or directory
+    1 | #include <windows.h>
+      |          ^~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_b9a09.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_b9a09.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_b9a09.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_b9a09/fast' failed
+make: *** [cmTC_b9a09/fast] Error 2
+
+
+Determining if the function _strtoi64 exists failed with the following output:
+Change Dir: /home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3fbf1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3fbf1.dir/build.make CMakeFiles/cmTC_3fbf1.dir/build
+make[1]: Entering directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3fbf1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -D_GNU_SOURCE  -Wall -Wextra -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=_strtoi64   -o CMakeFiles/cmTC_3fbf1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3fbf1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3fbf1.dir/link.txt --verbose=1
+/usr/bin/cc -D_GNU_SOURCE  -Wall -Wextra -fvisibility=hidden -fPIC -Wno-missing-field-initializers -Wstrict-aliasing -Wstrict-prototypes -Wdeclaration-after-statement -Wshift-count-overflow -Wunused-const-variable -Wunused-function -Wint-conversion -Wformat -Wformat-security -DCHECK_FUNCTION_EXISTS=_strtoi64    CMakeFiles/cmTC_3fbf1.dir/CheckFunctionExists.c.o  -o cmTC_3fbf1 
+CMakeFiles/cmTC_3fbf1.dir/CheckFunctionExists.c.o: In function `main':
+CheckFunctionExists.c:(.text+0x10): undefined reference to `_strtoi64'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3fbf1.dir/build.make:97: recipe for target 'cmTC_3fbf1' failed
+make[1]: *** [cmTC_3fbf1] Error 1
+make[1]: Leaving directory '/home/ilya/Desktop/code/git_tool/libgit2/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3fbf1/fast' failed
+make: *** [cmTC_3fbf1/fast] Error 2
+
+
